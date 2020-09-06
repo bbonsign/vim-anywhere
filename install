@@ -71,12 +71,13 @@ fi
 # Linux specific checks
 if [[ $OSTYPE == "linux-gnu" ]]; then
   require_one_installed gconftool gsettings
-  require_installed gvim
+  # require_installed gvim
   require_installed xclip
 
 # OSX specific checks
 elif [[ $OSTYPE == "darwin"* ]]; then
-  require_installed mvim 'Run `brew install macvim`.'
+  echo "skip macvim check"
+  # require_installed mvim 'Run `brew install macvim`.'
 
 # Unsupported OS
 else
